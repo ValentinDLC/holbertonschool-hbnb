@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
     participant User
     participant API as Presentation Layer (API)
