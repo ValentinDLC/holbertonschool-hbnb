@@ -34,7 +34,26 @@ Facade Pattern: simplifies access from the presentation layer to the business lo
  The presentation uses business logic, the business logic uses persistence.
 
 ## 2 - Business Logic Layer: 
-Present the detailed class diagram, explaining the entities, their relationships, and how they fit into the business logic of the application.
+This Layer contains the class diagram that represents the internal structure of the Business Logic Layer. 
+It models the entities and their relationships.
+
+### Entities
+- User : Represents a person registered on the platform.
+- Place : Represents a property available for rent.
+- Review : Represents a comment left by a user about a property.
+- Amenity : Represents the amenities of a property (WiFi, swimming pool, parking, etc...).
+- BaseModel : Parent model that all others inherit from. It contains common attributes(`id`, `create_date`, `update_date`) and methods(`create`, `update`, `delete`).
+
+### Relationships
+
+- User -> Place (One-To-Many):
+A user can own multiples properties
+- User -> Review (One-To-Many)
+A user can write several reviews
+- Place -> Review (One-To-Many):
+A place can have multiple reviews
+- Place <-> Amenity (Many-To-Many):
+A place can have multiples amenities and an amenity can have multiples places
 
 ## 3 - API Interaction Flow: 
 Include the sequence diagrams for the selected API calls, providing explanations of the interactions and data flow between components.
