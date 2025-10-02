@@ -1,7 +1,7 @@
-```mermaid
----
+``` mermaid
+ ---
 config:
-  theme: base
+  theme: dark
   look: neo
 ---
 classDiagram
