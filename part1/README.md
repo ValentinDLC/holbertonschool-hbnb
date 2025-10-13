@@ -1,19 +1,19 @@
 
 # HBnB - UML
 
-Littre intro there
+This project organises an application into three main layers:
 
- This project organises an application into three main layers:
-- Presentation Layer
+### Presentation Layer
 Manages the user interface and APIs.
 Serves as the entry point for all user requests.
 
-- Business Logic Layer
+### Business Logic Layer
 
 Contains the business logic and main entities: User, Place, Review, Amenity.
 Applies business rules and prepares data for persistence.
 
-- Persistence Layer
+### Persistence Layer
+
 Manages data storage via the database (DatabaseAccess) or files (FilesStorage) and this is the responsible for reading and writing data.
 
 ## 1 -  High-Level Architecture: 
