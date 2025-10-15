@@ -16,5 +16,15 @@ class Place(BaseModel):
         self.price = price
         self.latitude = latitude
         self.longitude = longitude
+        self.owner = owner
 
 
+    def is_owner(self, user):
+        """
+        Check if the user is the owner of the place.
+
+        Args:
+            user (User): The user to check against the place's owner.
+        """
+        return self.owner == user
+    
