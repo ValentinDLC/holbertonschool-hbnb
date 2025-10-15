@@ -25,5 +25,6 @@ class User(BaseModel):
         self.last_name = last_name
         self.is_admin = is_admin
 
+        #TODO: hash password, print formationg, serialization, check format email, max length first and last name.
 
 
