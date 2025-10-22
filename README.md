@@ -10,7 +10,4 @@ Writing in progress as each stage of the project progresses 🚀
 
 
 ## Authors
-
-- [Jeany](https://github.com/SabyJeany)
-- [Rebecca](https://github.com/SG1-Rebecca)
 - [Valentin](https://github.com/ValentinDLC)
