@@ -1,14 +1,15 @@
 # HBnb - Business Logic and API
 
+```bash
 hbnb/
 ├── app/
-│   ├──api/
-│   │   ├──v1/
-│   │   │   ├──amenities.py
-│   │   │   ├──places.py
-│   │   │   ├──reviews.py
-│   │   │   ├──users.py
-│   │   │   ├──__init__.py
+│   ├── api/
+│   │   ├── v1/
+│   │   │   ├── amenities.py
+│   │   │   ├── places.py
+│   │   │   ├── reviews.py
+│   │   │   ├── users.py
+│   │   │   ├── __init__.py
 │   ├── __init__.py
 │   ├── models/
 │   │   ├── __init__.py
@@ -26,14 +27,14 @@ hbnb/
 ├── tests/
 │   ├── test_endpoints.py
 │   ├── run_all_test.sh
-│   ├──test_user_endpoint.sh
-│   ├──test_place_endpoint.sh
-│   ├──test_amenity_endpoint.sh
-│   ├──test_review_endpoint.sh
+│   ├── test_user_endpoint.sh
+│   ├── test_place_endpoint.sh
+│   ├── test_amenity_endpoint.sh
+│   ├── test_review_endpoint.sh
 ├── run.py
 ├── config.py
 ├── requirements.txt
-
+```
 
 # Features
 
@@ -75,14 +76,14 @@ bash (for test scripts)
 ---
 
 ## Step 1: Clone the Repository
-bash
+```bash
 git clone <repository-url>
 cd HBnB-Evolution
-
+```
 ---
 
 ## Step 2: Create Virtual Environment
-bash
+```bash
 # Create virtual environment
 python3 -m venv venv
 
@@ -92,19 +93,19 @@ source venv/bin/activate
 
 # On Windows:
 venv\Scripts\activate
-
+```
 ---
 
 ## Step 3: Install Dependencies
-bash
+```bash
 pip install -r requirements.txt
-
+```
 ---
 
 # Running the Application
 
 ## Development Server
-bash
+```bash
 # Start the Flask development server
 python3 run.py
 
@@ -117,7 +118,7 @@ Expected Output:
  * Serving Flask app 'app'
  * Debug mode: on
  * Running on http://127.0.0.1:5001
-
+```
 ---
 
 # 📚 API Documentation
@@ -126,23 +127,23 @@ Expected Output:
 Once the server is running, access the interactive API documentation:
 http://localhost:5001/api/v1/
 
-![swagger.user](hbnb/images/swagger.user.png)
-![swagger.user_id](hbnb/images/swagger.user_id.png)
-![swagger.user](hbnb/images/swagger.place.png)
-![swagger.user](hbnb/images/swagger.place_id.png)
-![swagger.user](hbnb/images/swagger.amenity.png)
-![swagger.user](hbnb/images/swagger.amenity_id.png)
+![swagger.user](hbnb/images/swagger-user.png)
+![swagger.user_id](hbnb/images/swagger-user_id.png)
+![swagger.user](hbnb/images/swagger-place.png)
+![swagger.user](hbnb/images/swagger-place_id.png)
+![swagger.user](hbnb/images/swagger-amenity.png)
+![swagger.user](hbnb/images/swagger-amenity_id.png)
 
 ---
 
 # 🧪 Unit Tests
-bash
+```bash
 # Method 1: Direct execution
 python3 tests/test_endpoints.py
 
 # Run single test
 python3 -m unittest tests.test_endpoints
-
+```
 ---
 
 # 🔌 API Endpoints
@@ -188,7 +189,7 @@ Email Pattern:
 # 💡 Examples
 
 ## Create a User
-bash
+```bash
 curl -X POST http://localhost:5001/api/v1/users/ \
   -H "Content-Type: application/json" \
   -d '{
@@ -207,11 +208,11 @@ json
   "created_at": "2025-10-20T12:00:00",
   "updated_at": "2025-10-20T12:00:00"
 }
-
+```
 ---
 
 ## Create a Place
-bash
+```bash
 curl -X POST http://localhost:5001/api/v1/places/ \
   -H "Content-Type: application/json" \
   -d '{
@@ -241,11 +242,11 @@ json
   "created_at": "2025-10-20T12:05:00",
   "updated_at": "2025-10-20T12:05:00"
 }
-
+```
 ---
 
 ## Create a Review
-bash
+```bash
 curl -X POST http://localhost:5001/api/v1/reviews/ \
   -H "Content-Type: application/json" \
   -d '{
@@ -266,11 +267,11 @@ json
   "created_at": "2025-10-20T12:10:00",
   "updated_at": "2025-10-20T12:10:00"
 }
-
+```
 ---
 
 ## Create an Amenity
-bash
+```bash
 curl -X POST http://localhost:5001/api/v1/amenities/ \
   -H "Content-Type: application/json" \
   -d '{"name": "Wi-Fi"}'
@@ -283,11 +284,11 @@ json
   "created_at": "2025-10-20T12:15:00",
   "updated_at": "2025-10-20T12:15:00"
 }
-
+```
 ---
 
 ## Error Response Example
-bash
+```bash
 curl -X POST http://localhost:5001/api/v1/users/ \
   -H "Content-Type: application/json" \
   -d '{
@@ -301,3 +302,4 @@ json
 {
   "error": "Invalid email format"
 }
+```
